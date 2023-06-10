@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:472883725638:task-definition/ecommtask1:1"
+        LoadBalancerInfo:
+          ContainerName: "ecommimage1"
+          ContainerPort: 8080
